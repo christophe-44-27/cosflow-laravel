@@ -43,3 +43,7 @@ Route::prefix('groups')->middleware('auth:api')->group(function(){
     Route::post('/{group}/detach/{project}', 'GroupController@detach')->name('group.delete');
     Route::post('/join/{code}', 'GroupController@join')->name('group.join');
 });
+
+Route::prefix('user')->middleware('auth:api')->group(function() {
+    Route::post('/profile', 'ProfileController@displayProfile')->name('display_profile');
+});

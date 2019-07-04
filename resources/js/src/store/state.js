@@ -24,9 +24,9 @@ const state = {
     navbarSearchAndPinList: navbarSearchAndPinList,
     AppActiveUser: {
         id: 0,
-        name: 'John Doe',
-        about: 'Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie brownie marshmallow.',
-        img: 'avatar-s-11.png',
+        name: null,
+        about: null,
+        img: null,
         status: 'online',
     },
 

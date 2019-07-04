@@ -115,7 +115,7 @@
 			<!-- USER META -->
 			<div class="the-navbar__user-meta flex items-center">
 				<div class="text-right leading-tight hidden sm:block">
-					<p class="font-semibold">John Doe</p>
+					<p class="font-semibold">{{ userInformations.name }}</p>
 					<small>Available</small>
 				</div>
 				<vs-dropdown vs-custom-content vs-trigger-click class="cursor-pointer">
@@ -142,6 +142,7 @@
 import VxAutoSuggest from '@/components/vx-auto-suggest/VxAutoSuggest.vue';
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 import draggable from 'vuedraggable'
+import axios from 'axios'
 
 export default {
     name: "the-navbar",
@@ -169,7 +170,14 @@ export default {
             },
             autoFocusSearch: false,
             showBookmarkPagesDropdown: false,
+            userInformations: [],
         }
+    },
+    mounted: function() {
+        axios.post('api/user/profile')
+            .then(response => {
+                this.userInformations = response.data.data;
+            })
     },
     watch: {
         '$route'() {

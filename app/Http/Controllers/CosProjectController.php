@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CosProjectRequest;
-use App\Http\Resources\CosProjectResource;
+use App\Resources\CosProjectResource;
 use App\Models\CosProject;
 use App\Models\CreatedElement;
 use App\Models\PurchasedElement;

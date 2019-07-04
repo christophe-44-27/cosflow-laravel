@@ -4,7 +4,7 @@ namespace App\Resources;
 
 use Illuminate\Http\Resources\Json\Resource;
 
-class GroupResource extends Resource
+class UserProfileResource extends Resource
 {
     /**
      * Transform the resource into an array.
@@ -17,7 +17,8 @@ class GroupResource extends Resource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'group_code' => $this->group_code
+            'avatar' => null,
+            'email' => $this->email
         ];
     }
 }

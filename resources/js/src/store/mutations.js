@@ -85,6 +85,11 @@ const mutations = {
     updateAccessToken: (state, accessToken) => {
         state.accessToken = accessToken;
     },
+    UPDATE_USER_INFORMATIONS: (state, userDatas) => {
+        state.AppActiveUser.id = userDatas.id;
+        state.AppActiveUser.name = userDatas.name;
+        state.AppActiveUser.img = userDatas.avatar;
+    },
     logout: (state) => {
         state.accessToken = null;
     }

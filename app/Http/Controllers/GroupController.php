@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\GroupRequest;
-use App\Http\Resources\GroupResource;
+use App\Resources\GroupResource;
 use App\Models\CosProject;
 use App\Models\Group;
 use Illuminate\Http\Request;

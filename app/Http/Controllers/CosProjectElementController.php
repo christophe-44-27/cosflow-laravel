@@ -3,16 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CosProjectRequest;
-use App\Http\Resources\CosProjectElementResource;
-use App\Http\Resources\CosProjectResource;
+use App\Resources\CosProjectElementResource;
+use App\Resources\CosProjectResource;
 use App\Models\CosProject;
 use App\Models\CosProjectElement;
 use App\Models\CreatedElement;
 use App\Models\PurchasedElement;
 use App\Services\FileUploadService;
 use Illuminate\Http\Request;
-use Illuminate\Http\Resources\Json\Resource;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class CosProjectElementController extends Controller

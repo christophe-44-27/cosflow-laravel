@@ -75,6 +75,12 @@ const actions = {
                 commit('updateAccessToken', null);
             })
     },
+    fetchUserInformations({commit}) {
+        axios.post('user/profile')
+            .then(response => {
+                commit('UPDATE_USER_INFORMATIONS', response.data.user);
+            })
+    },
     logout({ commit }) {
         localStorage.removeItem('accessToken');
         commit('logout');
